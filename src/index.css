@@ -1,0 +1,27 @@
+/*
+ * Copyright 2026 U.S. Federal Government (in countries where recognized)
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Cloudscape supplies the design system, so this file stays small on purpose:
+ * only the things a component library cannot set for us.
+ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* The app layout measures the viewport, so the root must fill it. */
+#root {
+  min-height: 100vh;
+}
+
+/*
+ * Cloudscape renders its own focus rings. Removing the UA outline without a
+ * replacement would break keyboard navigation, so this only scopes it to
+ * elements the library styles itself.
+ */
+.awsui-visual-refresh :focus:not(:focus-visible) {
+  outline: none;
+}
